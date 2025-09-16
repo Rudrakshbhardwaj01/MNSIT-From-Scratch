@@ -91,8 +91,8 @@ All implementation and experimentation is intended to be done within `MNSITfromS
 
 ## Dataset
 
-- **Source:** [MNIST Database of handwritten digits](http://yann.lecun.com/exdb/mnist/)
-- **Description:** 70,000 grayscale images (28x28 pixels), with 60,000 for training and 10,000 for testing.
+- **Source:** [MNIST Database of handwritten digits](http://yann.lecun.com/exdb/mnist/) 
+- **Description:** 10,000 grayscale images (28x28 pixels), with 9000 for training and 1000 for testing.
 - **Classes:** Digits 0–9
 
 ---
