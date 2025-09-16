@@ -1,6 +1,6 @@
 # MNSIT-From-Scratch
 
-This repository implements the MNIST digit classification task **from scratch** using Python. The goal is to help learners understand the basics of machine learning and neural networks by building a simple classifier without relying on high-level deep learning libraries like TensorFlow, PyTorch, or Keras. The core logic is implemented manually, with the help of NumPy for numerical operations.
+This repository implements the MNIST digit classification task **from scratch** using Python and NumPy. The aim is to offer an educational, step-by-step approach to understanding neural networks by manually building, training, and evaluating a simple classification model—without relying on frameworks like TensorFlow or PyTorch.
 
 ---
 
@@ -23,22 +23,22 @@ This repository implements the MNIST digit classification task **from scratch** 
 
 ## About
 
-**MNIST From Scratch** is an educational project for understanding neural networks by building a digit classifier for the MNIST dataset, step by step. Here, you will find:
+**MNIST From Scratch** is an educational project for learning about neural networks by constructing a digit classifier for the MNIST dataset from the ground up. This repository guides you through:
 
 - Manual data loading and preprocessing (using NumPy)
-- Building a neural network from scratch
-- Forward and backward propagation
-- Training loop with gradient descent
-- Performance evaluation
+- Building a neural network from scratch with multiple layers
+- Implementing forward and backward propagation
+- Training the model using gradient descent
+- Evaluating model performance
 
 ---
 
 ## Features
 
-- **Pure Python + NumPy:** No external ML frameworks required
-- **Jupyter Notebook Implementation:** All logic and explanations are contained in a notebook for easy learning and experimentation
-- **Manual Model Construction:** Forward and backward passes coded manually
-- **Configurable Architecture:** Easily modify the network structure and hyperparameters
+- **Pure Python + NumPy:** No external ML frameworks required.
+- **Jupyter Notebook Implementation:** All logic and explanations are contained in a notebook for easy learning and experimentation.
+- **Manual Model Construction:** Forward and backward passes coded by hand.
+- **Configurable Architecture:** Easily modify the network structure and hyperparameters.
 
 ---
 
@@ -100,32 +100,33 @@ All implementation and experimentation is intended to be done within `MNSITfromS
 ## Model Architecture
 
 - **Input Layer:** 784 neurons (28x28 pixels flattened)
-- **Hidden Layers:** Configurable; typical default is one layer with 128 neurons and ReLU activation
+- **Hidden Layers:** 3 hidden layers (512, 128, 64 neurons respectively with ReLU activation)
 - **Output Layer:** 10 neurons (softmax for digit classification)
 
-You can adjust the structure in the notebook code cells.
+The structure is easily adjustable in the notebook.
 
 ---
 
 ## Training & Evaluation
 
-- **Forward Pass:** Computes predictions
-- **Loss Function:** Cross-Entropy Loss
-- **Backward Pass:** Manual gradient calculation
-- **Optimizer:** Stochastic Gradient Descent (SGD)
-- **Epochs and Batch Size:** Configurable in the notebook
+- **Forward Pass:** Computes predictions through the network.
+- **Loss Function:** Cross-Entropy Loss.
+- **Backward Pass:** Manual calculation of gradients via backpropagation.
+- **Optimizer:** Stochastic Gradient Descent (SGD).
+- **Epochs and Batch Size:** Configurable in the notebook.
 
-Training progress and accuracy are displayed in output cells.
+During training, progress and accuracy are displayed at intervals.
 
 ---
 
 ## Results
 
-| Metric        | Value (Example) |
-|---------------|----------------|
-| Test Accuracy | ~91%           |
+| Metric        | Value (Observed) |
+|---------------|------------------|
+| Train Accuracy | up to ~99.97%   |
+| Dev/Test Accuracy | ~95.8%       |
 
-*Results depend on your hyperparameters and model structure.*
+*Final accuracy may vary slightly based on random initialization and hyperparameters. The model achieves high training accuracy and strong generalization on the dev set using a fully manual, multilayer neural network.*
 
 ---
 
